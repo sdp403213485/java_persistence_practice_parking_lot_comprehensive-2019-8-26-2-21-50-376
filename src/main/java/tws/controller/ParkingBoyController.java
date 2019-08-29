@@ -30,4 +30,6 @@ public class ParkingBoyController {
 		public void addParkingBoy(@RequestBody ParkingBoy parkingBoy) {
 			parkingBoyMapper.insertEmployee(parkingBoy);
 		}
+	
+	
 }
