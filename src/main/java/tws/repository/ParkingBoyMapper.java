@@ -18,6 +18,6 @@ public interface ParkingBoyMapper {
 	@Select("select * from parkingBoy")
 	List<ParkingBoy> selectAll();
 	
-	@Insert("insert into parkingBoy values (#{parkingBoy.id})")
+	@Insert("insert into parkingBoy values (#{parkingBoy.employeeID})")
 	void insertEmployee(@Param("parkingBoy") ParkingBoy parkingBoy);
 }
