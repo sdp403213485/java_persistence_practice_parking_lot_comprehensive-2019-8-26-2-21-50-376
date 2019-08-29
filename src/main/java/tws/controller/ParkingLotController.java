@@ -28,12 +28,12 @@ public class ParkingLotController {
     @Autowired
     private ParkingLotMapper parkingLotMapper;
 
-    @GetMapping("")
+    @GetMapping
     public ResponseEntity<List<ParkingLot>> getAll() {
         return ResponseEntity.ok(parkingLotMapper.selectAll());
     }
 
-    @PostMapping("")
+    @PostMapping
     public ResponseEntity<ParkingLot> createEmployee(@RequestBody ParkingLot parkingLot) {
         parkingLotMapper.insert(parkingLot);
         return ResponseEntity.created(URI.create("/parkinglots/" + parkingLot.getId())).body(parkingLot);
