@@ -1,3 +1,12 @@
-CREATE TABLE parkingboy (
-  employeeID VARCHAR(64) PRIMARY KEY 
+CREATE TABLE employee(
+  id INTEGER PRIMARY KEY,
+  name VARCHAR(64) NOT NULL,
+  age   VARCHAR(64) NOT NULL
 );
+
+
+
+
+
+
+
