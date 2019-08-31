@@ -19,10 +19,10 @@ public interface ParkingLotMapper {
 
     @Insert("insert into parkinglots values (#{parkinglot.parkingLotID}, #{parkinglot.capacity}, #{parkinglot.availablePositionCount}, #{parkinglot.employeeID});")
     void insert(@Param("parkinglot") ParkingLot parkinglot);
+    
+    
+    @Select("select parkingLotID from parkinglots where employeeID = #{employeeID}")
+    List<String> selectParkinglotIdbyOneParkingboy(@Param("employeeID") String employeeID);
 
-//    @Update("update parkinglot set parkinglot.capacity=#{employee.capacity}, parkinglot.availablePositionCount=#{employee.availablePositionCount} where parkinglot.employeeID = #{employeeID};")
-//    void update(@Param("parkinglot") int parkingBoyId, @Param("employee") ParkingLot parkinglot);
-//
-//    @Delete("delete from parkinglot where parkinglot.parkingboy_id #{parkingBoysId};")
-//    void deleteOne(@Param("parkingBoysId") int parkingBoysId);
+
 }
