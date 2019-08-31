@@ -1,10 +1,10 @@
-CREATE TABLE employee(
-  id INTEGER PRIMARY KEY,
-  name VARCHAR(64) NOT NULL,
-  age   VARCHAR(64) NOT NULL
+CREATE TABLE parkingBoys(
+  employeeID  VARCHAR PRIMARY KEY,
 );
 
-
+INSERT INTO parkingBoys values ('1');
+INSERT INTO parkingBoys values ('2');
+INSERT INTO parkingBoys values ('3');
 
 
 

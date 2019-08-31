@@ -15,9 +15,9 @@ import tws.entity.ParkingBoy;
 
 @Mapper
 public interface ParkingBoyMapper {
-	@Select("select * from parkingBoy")
+	@Select("select * from parkingBoys")
 	List<ParkingBoy> selectAll();
 	
-	@Insert("insert into parkingBoy values (#{parkingBoy.employeeID})")
+	@Insert("insert into parkingBoys values (#{parkingBoy.employeeID})")
 	void insertEmployee(@Param("parkingBoy") ParkingBoy parkingBoy);
 }
