@@ -34,20 +34,19 @@ public class ParkingLotController {
     }
 
     @PostMapping
-    public ResponseEntity<ParkingLot> createEmployee(@RequestBody ParkingLot parkingLot) {
+    public void createParkingLot(@RequestBody ParkingLot parkingLot) {
         parkingLotMapper.insert(parkingLot);
-        return ResponseEntity.created(URI.create("/parkinglots/" + parkingLot.getId())).body(parkingLot);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<ParkingLot> updateEmployee(@PathVariable int id, @RequestBody ParkingLot parkingLot){
-        parkingLotMapper.update(id,parkingLot);
-        return ResponseEntity.ok(parkingLot);
-    }
-
-    @DeleteMapping("/{id}")
-    public void deleteEmployee(@PathVariable int id) {
-        parkingLotMapper.deleteOne(id);
-    }
+//    @PutMapping("/{id}")
+//    public ResponseEntity<ParkingLot> updateEmployee(@PathVariable int id, @RequestBody ParkingLot parkingLot){
+//        parkingLotMapper.update(id,parkingLot);
+//        return ResponseEntity.ok(parkingLot);
+//    }
+//
+//    @DeleteMapping("/{id}")
+//    public void deleteEmployee(@PathVariable int id) {
+//        parkingLotMapper.deleteOne(id);
+//    }
 
 }

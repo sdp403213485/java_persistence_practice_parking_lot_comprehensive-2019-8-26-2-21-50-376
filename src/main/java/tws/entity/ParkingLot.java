@@ -1,50 +1,57 @@
 package tws.entity;
 
 public class ParkingLot {
-    private int id;
+    private String parkingLotID;
     private int capacity;
     private int availablePositionCount;
-    private int parkingBoyId;
+    private String employeeID;
 
-    public ParkingLot(){};
+    public ParkingLot(){}
 
-    public ParkingLot(int id, int capacity, int availablePositionCount, int parkingBoyId){
-        this.id= id;
-        this.capacity = capacity;
-        this.availablePositionCount = availablePositionCount;
-        this.parkingBoyId = parkingBoyId;
-    }
+	public ParkingLot(String parkingLotID, int capacity, int availablePositionCount, String employeeID) {
+		super();
+		this.parkingLotID = parkingLotID;
+		this.capacity = capacity;
+		this.availablePositionCount = availablePositionCount;
+		this.employeeID = employeeID;
+	}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	public String getParkingLotID() {
+		return parkingLotID;
+	}
 
-    public int getId() {
-        return id;
-    }
+	public void setParkingLotID(String parkingLotID) {
+		this.parkingLotID = parkingLotID;
+	}
 
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
-    }
+	public int getCapacity() {
+		return capacity;
+	}
 
-    public int getCapacity() {
-        return capacity;
-    }
+	public void setCapacity(int capacity) {
+		this.capacity = capacity;
+	}
 
-    public void setAvailablePositionCount(int availablePositionCount) {
-        this.availablePositionCount = availablePositionCount;
-    }
+	public int getAvailablePositionCount() {
+		return availablePositionCount;
+	}
 
-    public int getAvailablePositionCount() {
-        return availablePositionCount;
-    }
+	public void setAvailablePositionCount(int availablePositionCount) {
+		this.availablePositionCount = availablePositionCount;
+	}
 
-    public void setParkingBoyId(int parkingBoyId) {
-        this.parkingBoyId = parkingBoyId;
-    }
+	public String getEmployeeID() {
+		return employeeID;
+	}
 
-    public int getParkingBoyId() {
-        return parkingBoyId;
-    }
+	public void setEmployeeID(String employeeID) {
+		this.employeeID = employeeID;
+	}
+
+	
+
+
+	
+	
 }
 
